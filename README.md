@@ -55,7 +55,13 @@ Glide.With(context).Load("GifUrl")
 					 .Into(viewHolder.propertyImageView);
 ```
 
+Fast Loading from Cache :
 
+![alt tag](http://g.recordit.co/JShY8Oe64y.gif)
+
+Combine Gif with Image
+
+![alt tag](http://g.recordit.co/p2oEN2bLIn.gif)
 
 Author
 ------
