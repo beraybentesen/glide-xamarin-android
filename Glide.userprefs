@@ -1,0 +1,29 @@
+﻿<Properties StartupItem="Glide/Glide.csproj">
+  <MonoDevelop.Ide.ItemProperties.Glide PreferredExecutionTarget="Android.84B7N16128001254" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Glide/Transforms/Metadata.xml">
+    <Files>
+      <File FileName="Glide/Transforms/Metadata.xml" Line="8" Column="277" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Glide" expanded="True">
+            <Node name="Glide" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Additions" expanded="True" />
+              <Node name="Jars" expanded="True" />
+              <Node name="Transforms" expanded="True">
+                <Node name="Metadata.xml" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
