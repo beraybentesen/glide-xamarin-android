@@ -7,6 +7,8 @@ decoding, memory and disk caching, and resource pooling into a simple and easy t
 
 Android resource: https://github.com/bumptech/glide
 
+Version : 3.7.0
+
 How do I use Glide?
 -------------------
 
