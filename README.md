@@ -9,6 +9,8 @@ Android resource: https://github.com/bumptech/glide
 
 Version : 3.7.0
 
+Download : Available on Nuget Gallery ( https://www.nuget.org/packages/Glide.Xamarin/ )
+
 How do I use Glide?
 -------------------
 
