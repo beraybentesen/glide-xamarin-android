@@ -66,6 +66,10 @@ Combine Gif with Image
 
 ![alt tag](http://g.recordit.co/p2oEN2bLIn.gif)
 
+Using Listener : 
+
+https://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/android_callable_wrappers/
+
 Author
 ------
 Beray Bentesen -  @BerayBentesen on Twitter
