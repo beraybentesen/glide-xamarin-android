@@ -50,6 +50,10 @@ Glide.With(context).Load("Url")
 				 .Into(viewHolder.propertyImageView);
 ```
 
+Using Listener : 
+
+https://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/android_callable_wrappers/
+
 Gif support : 
 ```cs
 Glide.With(context).Load("GifUrl")
@@ -66,9 +70,7 @@ Combine Gif with Image
 
 ![alt tag](http://g.recordit.co/p2oEN2bLIn.gif)
 
-Using Listener : 
 
-https://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/android_callable_wrappers/
 
 Author
 ------
