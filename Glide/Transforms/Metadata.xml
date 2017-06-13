@@ -46,4 +46,5 @@
 	<remove-node path="/api/package[@name='com.bumptech.glide']/interface[@name='DrawableOptions']/method[@name='crossFade' and count(parameter)=2 and parameter[1][@type='android.view.animation.Animation'] and parameter[2][@type='int']]" />
 	<remove-node path="/api/package[@name='com.bumptech.glide']/interface[@name='DrawableOptions']/method[@name='crossFade' and count(parameter)=1 and parameter[1][@type='int']]" />
 	<remove-node path="/api/package[@name='com.bumptech.glide']/interface[@name='DrawableOptions']/method[@name='crossFade' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]" />
+	<remove-node path="/api/package[@name='com.bumptech.glide.load.engine.executor']/class[@name='FifoPriorityThreadPoolExecutor.LoadTask']" />
 </metadata>
