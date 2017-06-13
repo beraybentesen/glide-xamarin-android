@@ -28,6 +28,7 @@
 	<remove-node path="/api/package[@name='com.bumptech.glide.load.data']/class[@name='StreamAssetPathFetcher']" />
 	<remove-node path="/api/package[@name='com.bumptech.glide.load.data']/class[@name='StreamLocalUriFetcher']" />
 	<remove-node path="/api/package[@name='com.bumptech.glide.load.engine.cache']/class[@name='LruResourceCache']" />
+	<remove-node path="/api/package[@name='com.bumptech.glide.load.engine.executor']/class[@name='FifoPriorityThreadPoolExecutor.LoadTask']" />
 	<remove-node path="/api/package[@name='com.bumptech.glide.load.model']/interface[@name='ModelLoader']/method[@name='getResourceFetcher' and count(parameter)=3 and parameter[1][@type='T'] and parameter[2][@type='int'] and parameter[3][@type='int']]" />
 	<remove-node path="/api/package[@name='com.bumptech.glide.load']/interface[@name='Encoder']/method[@name='encode' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='java.io.OutputStream']]" />
 	<remove-node path="/api/package[@name='com.bumptech.glide.load']/interface[@name='Transformation']/method[@name='transform' and count(parameter)=3 and parameter[1][@type='com.bumptech.glide.load.engine.Resource&lt;T&gt;'] and parameter[2][@type='int'] and parameter[3][@type='int']]" />
@@ -38,6 +39,7 @@
 	<remove-node path="/api/package[@name='com.bumptech.glide.request.target']/interface[@name='Target']/method[@name='onResourceReady' and count(parameter)=2 and parameter[1][@type='R'] and parameter[2][@type='com.bumptech.glide.request.animation.GlideAnimation&lt;? super R&gt;']]" />
 	<remove-node path="/api/package[@name='com.bumptech.glide.request.target']/class[@name='ImageViewTarget']/method[@name='setResource' and count(parameter)=1 and parameter[1][@type='Z']]" />
 	<remove-node path="/api/package[@name='com.bumptech.glide.request.animation']/interface[@name='GlideAnimation.ViewAdapter']/method[@name='getView' and count(parameter)=0]" />
+	<remove-node path="/api/package[@name='com.bumptech.glide.request.animation']/class[@name='BitmapCrossFadeFactory']" />
 	<remove-node path="/api/package[@name='com.bumptech.glide.request.target']/class[@name='SquaringDrawable']" />
 	<remove-node path="/api/package[@name='com.bumptech.glide.manager']/class[@name='SupportRequestManagerFragment']/constructor[@name='SupportRequestManagerFragment' and count(parameter)=1 and parameter[1][@type='com.bumptech.glide.manager.ActivityFragmentLifecycle']]" />
 	<remove-node path="/api/package[@name='com.bumptech.glide']/interface[@name='BitmapOptions']/method[@name='centerCrop' and count(parameter)=0]" />
@@ -46,5 +48,4 @@
 	<remove-node path="/api/package[@name='com.bumptech.glide']/interface[@name='DrawableOptions']/method[@name='crossFade' and count(parameter)=2 and parameter[1][@type='android.view.animation.Animation'] and parameter[2][@type='int']]" />
 	<remove-node path="/api/package[@name='com.bumptech.glide']/interface[@name='DrawableOptions']/method[@name='crossFade' and count(parameter)=1 and parameter[1][@type='int']]" />
 	<remove-node path="/api/package[@name='com.bumptech.glide']/interface[@name='DrawableOptions']/method[@name='crossFade' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]" />
-	<remove-node path="/api/package[@name='com.bumptech.glide.load.engine.executor']/class[@name='FifoPriorityThreadPoolExecutor.LoadTask']" />
 </metadata>
