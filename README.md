@@ -8,9 +8,9 @@ decoding, memory and disk caching, and resource pooling into a simple and easy t
 
 Android resource: https://github.com/bumptech/glide
 
-Version : 3.7.0
+Version : 3.8.0
 
-Download : Available on Nuget Gallery ( https://www.nuget.org/packages/Glide.Xamarin/ )
+Download : Available on Nuget Gallery ( https://www.nuget.org/packages/Glide.Xamarin/3.8.0 )
 
 How do I use Glide?
 -------------------
