@@ -11,12 +11,13 @@ decoding, memory and disk caching, and resource pooling into a simple and easy t
 ## Usage
 
 ```
-	Install-Package Glide.Xamarin
+    Install-Package Glide.Xamarin
 ```
 
-Plz follow detail guidelines from original native library [here](http://bumptech.github.io/glide/).
+Follow guideline from original native library [here](http://bumptech.github.io/glide/).
 
 A sample usage
+
 ```cs
 Glide
 	.With(this)
