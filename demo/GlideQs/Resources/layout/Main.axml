@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    <TextView
+        android:paddingTop="32dp"
+        android:text="Glide v4x"
+        android:textSize="48sp"
+        android:textAlignment="gravity"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:paddingTop="4dp"
+        android:paddingBottom="16dp"
+        android:text="binding library by NAXAM"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimary"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_margin="32dp"
+        android:id="@+id/imgTest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scaleType="center" />
+</LinearLayout>

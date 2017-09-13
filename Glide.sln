@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naxam.GlideDiskLruCache.Dro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naxam.GlideAnnotations.Droid", "Naxam.GlideAnnotations.Droid\Naxam.GlideAnnotations.Droid.csproj", "{9620E7CA-292B-4040-AAF5-E5028A6C6626}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demo", "demo", "{A303187D-6E3A-4DAF-BE91-DD46F6B58392}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlideQs", "demo\GlideQs\GlideQs.csproj", "{2F2B2E44-F2FB-4585-AB9E-F6CECF4DA96D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +35,12 @@ Global
 		{9620E7CA-292B-4040-AAF5-E5028A6C6626}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9620E7CA-292B-4040-AAF5-E5028A6C6626}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9620E7CA-292B-4040-AAF5-E5028A6C6626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F2B2E44-F2FB-4585-AB9E-F6CECF4DA96D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2B2E44-F2FB-4585-AB9E-F6CECF4DA96D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2B2E44-F2FB-4585-AB9E-F6CECF4DA96D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2B2E44-F2FB-4585-AB9E-F6CECF4DA96D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2F2B2E44-F2FB-4585-AB9E-F6CECF4DA96D} = {A303187D-6E3A-4DAF-BE91-DD46F6B58392}
 	EndGlobalSection
 EndGlobal

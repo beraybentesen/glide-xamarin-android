@@ -47,9 +47,16 @@ namespace Com.Bumptech.Glide.Load.Data
 
         protected override Java.Lang.Object LoadResource(Android.Content.Res.AssetManager p0, string p1)
         {
-            var ptr = Android.Runtime.InputStreamAdapter.ToLocalJniHandle(LoadFile(p0, p1));
+            var handle = Android.Runtime.InputStreamAdapter.ToLocalJniHandle(LoadFile(p0, p1));
 
-            return new Java.Lang.Object(ptr, Android.Runtime.JniHandleOwnership.TransferLocalRef);
+            try
+            {
+                return new Java.Lang.Object(handle, Android.Runtime.JniHandleOwnership.TransferLocalRef);
+            }
+            finally
+            {
+                Android.Runtime.JNIEnv.DeleteLocalRef(handle);
+            }
         }
     }
 
@@ -61,10 +68,17 @@ namespace Com.Bumptech.Glide.Load.Data
         }
 
         protected override unsafe Java.Lang.Object LoadResource(global::Android.Net.Uri p0, global::Android.Content.ContentResolver p1)
-		{
-			var ptr = Android.Runtime.InputStreamAdapter.ToLocalJniHandle(LoadFile(p0, p1));
+        {
+            var handle = Android.Runtime.InputStreamAdapter.ToLocalJniHandle(LoadFile(p0, p1));
 
-			return new Java.Lang.Object(ptr, Android.Runtime.JniHandleOwnership.TransferLocalRef);
+            try
+            {
+                return new Java.Lang.Object(handle, Android.Runtime.JniHandleOwnership.TransferLocalRef);
+            }
+            finally
+            {
+                Android.Runtime.JNIEnv.DeleteLocalRef(handle);
+            }
         }
 
     }
@@ -192,18 +206,29 @@ namespace Com.Bumptech.Glide.Load.Resource.Bitmap
             return Encode((Load.Engine.IResource)data, file, options);
         }
     }
-    partial class GifDrawableEncoder
+
+    partial class BitmapEncoder
     {
         public virtual unsafe bool Encode(Java.Lang.Object data, Java.IO.File file, Load.Options options)
         {
             return Encode((Load.Engine.IResource)data, file, options);
         }
     }
-    partial class BitmapEncoder
+
+    partial class StreamBitmapDecoder : Load.IResourceDecoder
     {
-        public virtual unsafe bool Encode(Java.Lang.Object data, Java.IO.File file, Load.Options options)
+        Engine.IResource Load.IResourceDecoder.Decode(Java.Lang.Object p0, int p1, int p2, Load.Options p3)
         {
-            return Encode((Load.Engine.IResource)data, file, options);
+            var stream = Android.Runtime.InputStreamInvoker.FromJniHandle(p0.Handle, Android.Runtime.JniHandleOwnership.DoNotTransfer);
+
+            return Java.Interop.JavaObjectExtensions.JavaCast<Engine.IResource>(Decode(stream, p1, p2, p3));
+        }
+
+        bool Load.IResourceDecoder.Handles(global::Java.Lang.Object p0, Load.Options p1)
+        {
+            var stream = Android.Runtime.InputStreamInvoker.FromJniHandle(p0.Handle, Android.Runtime.JniHandleOwnership.DoNotTransfer);
+
+            return Handles(stream, p1);
         }
     }
 }
@@ -271,12 +296,122 @@ namespace Com.Bumptech.Glide.Request.Target
     }
 }
 
-namespace Com.Bumptech.Glide.Load.Engine.Bitmap_recycle {
-    partial class SizeConfigStrategy {
-        partial class KeyPool {
-            protected override unsafe Java.Lang.Object Create() {
+namespace Com.Bumptech.Glide.Load.Engine.Bitmap_recycle
+{
+    partial class SizeConfigStrategy
+    {
+        partial class KeyPool
+        {
+            protected override unsafe Java.Lang.Object Create()
+            {
                 return CreateKey();
             }
         }
+    }
+}
+
+namespace Com.Bumptech.Glide.Load.Data
+{
+    partial class InputStreamRewinder : Data.IDataRewinder
+    {
+        Java.Lang.Object Data.IDataRewinder.RewindAndGet()
+        {
+            var handle = Android.Runtime.InputStreamAdapter.ToLocalJniHandle(RewindAndGet());
+
+            try
+            {
+                return new Java.Lang.Object(handle, Android.Runtime.JniHandleOwnership.TransferLocalRef);
+            }
+            finally
+            {
+                Android.Runtime.JNIEnv.DeleteLocalRef(handle);
+            }
+        }
+
+        partial class Factory : Data.IDataRewinderFactory
+        {
+            Data.IDataRewinder Data.IDataRewinderFactory.Build(Java.Lang.Object p0)
+            {
+                var obj = Build(Android.Runtime.InputStreamInvoker.FromJniHandle(p0.Handle, Android.Runtime.JniHandleOwnership.DoNotTransfer));
+
+                return global::Java.Interop.JavaObjectExtensions.JavaCast<Data.IDataRewinder>(obj);
+            }
+        }
+    }
+}
+
+namespace Com.Bumptech.Glide.Load.Model
+{
+    partial class StreamEncoder : Load.IEncoder
+    {
+        bool Load.IEncoder.Encode(Java.Lang.Object p0, Java.IO.File p1, Load.Options p2)
+        {
+            var stream = Android.Runtime.InputStreamInvoker.FromJniHandle(p0.Handle, Android.Runtime.JniHandleOwnership.DoNotTransfer);
+            return Encode(stream, p1, p2);
+        }
+    }
+}
+
+namespace Com.Bumptech.Glide.Load.Resource.Bytes
+{
+    partial class BytesResource : Engine.IResource
+    {
+        Java.Lang.Object Engine.IResource.Get()
+        {
+            var bytes = Get();
+
+            return Android.Runtime.JavaArray<byte>.FromArray<byte>(bytes);
+        }
+    }
+}
+
+namespace Com.Bumptech.Glide.Load.Engine.Bitmap_recycle
+{
+    partial class IntegerArrayAdapter : IArrayAdapterInterface
+    {
+        int IArrayAdapterInterface.GetArrayLength(Java.Lang.Object p0)
+        {
+            return GetArrayLength(p0.ToArray<int>());
+        }
+
+        Java.Lang.Object IArrayAdapterInterface.NewArray(int p0)
+        {
+            var ints = NewArray(p0);
+            return Android.Runtime.JavaArray<int>.FromArray<int>(ints);
+        }
+    }
+
+    partial class ByteArrayAdapter : IArrayAdapterInterface
+    {
+        int IArrayAdapterInterface.GetArrayLength(Java.Lang.Object p0)
+        {
+            return GetArrayLength(p0.ToArray<byte>());
+        }
+
+        Java.Lang.Object IArrayAdapterInterface.NewArray(int p0)
+        {
+            var bytes = NewArray(p0);
+            return Android.Runtime.JavaArray<byte>.FromArray<byte>(bytes);
+        }
+    }
+}
+
+namespace Com.Bumptech.Glide.Load.Resource.Gif
+{
+    partial class StreamGifDecoder : Load.IResourceDecoder
+    {
+		Engine.IResource Load.IResourceDecoder.Decode(Java.Lang.Object p0, int p1, int p2, Load.Options p3)
+		{
+			var stream = Android.Runtime.InputStreamInvoker.FromJniHandle(p0.Handle, Android.Runtime.JniHandleOwnership.DoNotTransfer);
+
+			return Java.Interop.JavaObjectExtensions.JavaCast<Engine.IResource>(Decode(stream, p1, p2, p3));
+		}
+
+		bool Load.IResourceDecoder.Handles(global::Java.Lang.Object p0, Load.Options p1)
+		{
+			var stream = Android.Runtime.InputStreamInvoker.FromJniHandle(p0.Handle, Android.Runtime.JniHandleOwnership.DoNotTransfer);
+
+			return Handles(stream, p1);
+		}
     }
 }
