@@ -1,80 +1,34 @@
-Glide
-=====
-
-Glide Xamarin Binding
+## Glide - Xamarin Android Binding Library
 
 Glide is a fast and efficient open source media management and image loading framework for Android that wraps media
 decoding, memory and disk caching, and resource pooling into a simple and easy to use interface.
 
-Android resource: https://github.com/bumptech/glide
+|Fast Loading from Cache|Combine Gif with Image|
+|---|---|
+|![Fast Loading from Cache](http://g.recordit.co/JShY8Oe64y.gif)|![Combine Gif with Image](http://g.recordit.co/p2oEN2bLIn.gif)|
 
-Version : 3.8.0
 
-Download : Available on Nuget Gallery ( https://www.nuget.org/packages/Glide.Xamarin/3.8.0 )
+## Usage
 
-How do I use Glide?
--------------------
-
-Simple use cases :
-
-```cs
-// Default :
-Glide.With(this).Load("Url").Into(propertyPrimaryImageView);
-
-// Placeholder :
-Glide.With(this).Load("Url")
-			     .Placeholder(Resource.Drawable.placeholder)
-			     .Into(propertyPrimaryImageView);
-
-// Thumbnail & DontAnimate			     
-Glide.With(this).Load("Url")
-			     .Placeholder(Resource.Drawable.placeholder)
-			     .Thumbnail(0.1f)
-			     .DontAnimate()
-			     .Into(propertyPrimaryImageView);			     
-
-// SkipMemoryCache & DiskCacheStrategy
-Glide.With(this).Load("Url")
-				 .Placeholder(Resource.Drawable.placeholder)
-				 .SkipMemoryCache(true)
-				 .DiskCacheStrategy(DiskCacheStrategy.All)
-			     .Into(propertyPrimaryImageView);
+```
+	Install-Package Glide.Xamarin
 ```
 
-Using in RecyclerView | ListView Adapter :
-```cs
+Plz follow detail guidelines from original native library [here](http://bumptech.github.io/glide/).
 
-// Placeholder : 
-Glide.With(context).Load("Url")
-				 .Placeholder(Resource.Drawable.placeholder)
-				 .Into(viewHolder.propertyImageView);
+A sample usage
+```cs
+Glide
+	.With(this)
+	.Load("https://tinyurl.com/yb8ylrpz")
+	.Apply(RequestOptions.CircleCropTransform()).Into(imgTest);
 ```
 
-Using Listener : 
-
-https://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/android_callable_wrappers/
-
-Gif support : 
-```cs
-Glide.With(context).Load("GifUrl")
-					 .Placeholder(Resource.Drawable.placeholder)
-				     .DiskCacheStrategy(DiskCacheStrategy.Source)
-					 .Into(viewHolder.propertyImageView);
-```
-
-Fast Loading from Cache :
-
-![alt tag](http://g.recordit.co/JShY8Oe64y.gif)
-
-Combine Gif with Image
-
-![alt tag](http://g.recordit.co/p2oEN2bLIn.gif)
-
-
-
-Author
+Authors
 ------
-Beray Bentesen -  @BerayBentesen on Twitter
+
+- Beray Bentesen -  @BerayBentesen on Twitter
+- [Tuyen Vu](https://github.com/kanvuduc) @ [NAXAM](http://naxam.net)
 
 
 

@@ -5,12 +5,12 @@ using Android.App;
 // Information about this assembly is defined by the following attributes. 
 // Change them to the values specific to your project.
 
-[assembly: AssemblyTitle("Glide")]
+[assembly: AssemblyTitle("Naxam.GlideAnnotations.Droid")]
 [assembly: AssemblyDescription("Xamarin Android Binding Library - Glide Annotations")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NAXAM COMPANY LIMITED")]
 [assembly: AssemblyProduct("X Bindings")]
-[assembly: AssemblyCopyright("Copyright (c) 2017 NAXAM & Beray Bentesen")]
+[assembly: AssemblyCopyright("Copyright (c) 2017 NAXAM")]
 [assembly: AssemblyTrademark("NAXAM")]
 [assembly: AssemblyCulture("")]
 
