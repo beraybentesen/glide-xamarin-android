@@ -1,7 +1,7 @@
 ## Glide - Xamarin Android Binding Library
 
-Glide is a fast and efficient open source media management and image loading framework for Android that wraps media
-decoding, memory and disk caching, and resource pooling into a simple and easy to use interface.
+Glide is a fast and efficient image loading library for Android focused on smooth scrolling. Glide offers an easy to use API, a performant and extensible resource decoding pipeline and automatic resource pooling.
+
 
 |Fast Loading from Cache|Combine Gif with Image|
 |---|---|
