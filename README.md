@@ -21,7 +21,7 @@ A sample usage
 ```cs
 Glide
 	.With(this)
-	.Load("https://tinyurl.com/yb8ylrpz")
+	.Load("Url")
 	.Apply(RequestOptions.CircleCropTransform()).Into(imgTest);
 ```
 
