@@ -20,9 +20,9 @@ A sample usage
 
 ```cs
 Glide
-	.With(this)
-	.Load("Url")
-	.Apply(RequestOptions.CircleCropTransform()).Into(imgTest);
+     .With(this)
+     .Load("Url")
+     .Apply(RequestOptions.CircleCropTransform()).Into(imgTest);
 ```
 
 Authors
