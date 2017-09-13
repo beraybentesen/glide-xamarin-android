@@ -1,4 +1,41 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-	
+	<attr path="/api/package[@name='com.bumptech.glide.module']/interface[@name='AppliesOptions']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.bumptech.glide.module']/interface[@name='RegistersComponents']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.bumptech.glide.load.engine.bitmap_recycle']/interface[@name='LruPoolStrategy']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.bumptech.glide.load.engine.bitmap_recycle']/interface[@name='Poolable']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.bumptech.glide.load.engine.bitmap_recycle']/class[@name='BaseKeyPool']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.bumptech.glide.load.data.mediastore']/interface[@name='ThumbnailQuery']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.bumptech.glide.load.engine']/interface[@name='EngineJobListener']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.bumptech.glide.load.data']/class[@name='FileDescriptorAssetPathFetcher']/method[@name='loadResource' and count(parameter)=2 and parameter[1][@type='android.content.res.AssetManager'] and parameter[2][@type='java.lang.String']]" name="managedName">LoadFile</attr>
+	<attr path="/api/package[@name='com.bumptech.glide.load.data']/class[@name='FileDescriptorLocalUriFetcher']/method[@name='loadResource' and count(parameter)=2 and parameter[1][@type='android.net.Uri'] and parameter[2][@type='android.content.ContentResolver']]" name="managedName">LoadFile</attr>
+	<attr path="/api/package[@name='com.bumptech.glide.load.data']/class[@name='StreamAssetPathFetcher']/method[@name='loadResource' and count(parameter)=2 and parameter[1][@type='android.content.res.AssetManager'] and parameter[2][@type='java.lang.String']]" name="managedName">LoadFile</attr>
+	<attr path="/api/package[@name='com.bumptech.glide.load.data']/class[@name='StreamLocalUriFetcher']/method[@name='loadResource' and count(parameter)=2 and parameter[1][@type='android.net.Uri'] and parameter[2][@type='android.content.ContentResolver']]" name="managedName">LoadFile</attr>
+	<add-node path="/api/package[@name='com.bumptech.glide.request.target']/class[@name='BaseTarget']">
+		<method abstract="true" deprecated="not deprecated" final="false" name="onResourceReady" native="false" return="void" static="false" synchronized="false" visibility="public">
+			<parameter name="p0" type="Z">
+			</parameter>
+			<parameter name="p1" type="com.bumptech.glide.request.transition.Transition&lt;? super Z&gt;">
+			</parameter>
+		</method>
+	</add-node>
+	<add-node path="/api/package[@name='com.bumptech.glide.load.model.stream']/class[@name='BaseGlideUrlLoader']">
+		<method abstract="true" deprecated="not deprecated" final="false" name="handles" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+			<parameter name="p0" type="Model">
+			</parameter>
+		</method>
+	</add-node>
+
+	<attr path="/api/package[@name='com.bumptech.glide.request.target']/class[@name='ViewTarget']/method[@name='getView' and count(parameter)=0]" name="return">android.view.View</attr>
+	<attr path="/api/package[@name='com.bumptech.glide.request.target']/class[@name='ViewTarget']/field[@name='view']" name="managedName">_view</attr>
+	<!--<attr name="visibility">public</attr>
+    <attr name="visibility">public</attr>
+    <attr name="visibility">public</attr>
+    <attr name="visibility">public</attr>-->
+
+	<remove-node path="/api/package[@name='com.bumptech.glide.load.engine.bitmap_recycle']/class[@name='SizeConfigStrategy.KeyPool']/method[@name='create' and count(parameter)=0]"/>
+	<add-node path="/api/package[@name='com.bumptech.glide.load.engine.bitmap_recycle']/class[@name='SizeConfigStrategy.KeyPool']">
+        <method abstract="false" deprecated="not deprecated" final="false" name="create" native="false" return="com.bumptech.glide.load.engine.bitmap_recycle.SizeConfigStrategy.Key" static="false" synchronized="false" visibility="protected" managedName="CreateKey">
+        </method>
+	</add-node>
 </metadata>
