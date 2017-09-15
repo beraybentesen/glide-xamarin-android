@@ -29,6 +29,9 @@ Authors
 ------
 
 - Beray Bentesen -  @BerayBentesen on Twitter
+
+Contributors
+------
 - [Tuyen Vu](https://github.com/kanvuduc) @ [NAXAM](http://naxam.net)
 
 
