@@ -1,6 +1,6 @@
 ## Glide - Xamarin Android Binding Library
 
-VERSION : 4.0.0
+VERSION : 4.1.1
 
 Glide is a fast and efficient image loading library for Android focused on smooth scrolling. Glide offers an easy to use API, a performant and extensible resource decoding pipeline and automatic resource pooling.
 
@@ -16,7 +16,7 @@ Glide is a fast and efficient image loading library for Android focused on smoot
     Install-Package Glide.Xamarin
 ```
 
-Download : [Nuget Package](https://www.nuget.org/packages/Glide.Xamarin/4.0.0)
+Download : [Nuget Package](https://www.nuget.org/packages/Glide.Xamarin/4.1.1)
 
 Follow guideline from original native library [here](http://bumptech.github.io/glide/).
 
